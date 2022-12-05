@@ -1,0 +1,36 @@
+﻿@model LanguageAssistant.Models.User
+
+@{
+    ViewData["Title"] = "Log In";
+}
+
+<div class="logIn">
+    <h1 class="logInSingUpLbl" id="logInSignUpLblId">LOG IN</h1>
+    <form asp-action="LogIn">
+        <div class="inputContainer username">
+            <input class="inputData" placeholder="USERNAME" />
+            <hr class="line"/>
+        </div>
+        <div class="inputContainer password">
+            <input type="password" class="inputData" placeholder="PASSWORD" id="passwordId" />
+            <img onclick="switchPasswordVisibility('eyePasswordId', 'passwordId')" src="icons/hidden-eye.svg" class="icon" id="eyePasswordId" />
+            <hr class="line"/>
+        </div>
+        <div class="inputContainer password" id="confirmPasswordDivId">
+            <input type="password" class="inputData" placeholder="CONFIRM PASSWORD" id="confirmPasswordId" />
+            <img onclick="switchPasswordVisibility('eyeConfirmPasswordId', 'confirmPasswordId')" src="icons/hidden-eye.svg" class="icon" id="eyeConfirmPasswordId" />
+            <hr class="line"/>
+        </div>
+        <div id="btnContainerId">
+            <div onclick="switchLogInSignUp()" id="logInSignUpBtnId">SIGN UP</div>
+            <input onclick="submitBtn()" type="button" value="LOG IN" id="submitBtnId" />
+        </div>
+    </form>
+</div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }

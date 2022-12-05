@@ -1,0 +1,114 @@
+﻿:root {
+    --fontColor: #ddd;
+    --fontPlaceholderColor: #666;
+    --iconSize: 15pt;
+    --iconColor: invert(80%);
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    background-image: linear-gradient(90deg, #02383af3, #001e20ee );
+    color: var(--fontColor);
+}
+
+.line {
+    margin: 0;
+}
+
+.logInSingUpLbl {
+    font-weight: 400;
+    margin-top: 10pt;
+    margin-bottom: 20pt;
+}
+
+.logIn {
+    margin: 0 auto;
+    margin-top: 100pt;
+    width: 300pt;
+    background: linear-gradient(#0000001b, #00000078);
+    opacity: 0.9;
+    padding: 20pt;
+    padding-top: 10pt;
+    text-align: center;
+}
+
+.inputContainer {
+    margin: 15pt 0;
+    position: relative;
+}
+    .inputContainer:before {
+        content: '';
+        position: absolute;
+        background-size: 100% 100%;
+        width: var(--iconSize);
+        height: var(--iconSize);
+        filter: var(--iconColor);
+        left: 10pt;
+    }
+
+.username:before {
+    background-image: url("/icons/account-avatar-person-svgrepo-com.svg");
+}
+
+.password:before {
+    background-image: url("/icons/lock-padlock-privacy-svgrepo-com.svg");
+}
+ 
+#confirmPasswordDivId {
+     display: none; 
+}
+
+.password img {
+    position: absolute;
+    width: var(--iconSize);
+    filter: invert(60%);
+    top: 0;
+    right: 10pt;
+    cursor: pointer;
+}
+    .password img:hover {
+        filter: var(--iconColor);
+    }
+
+.inputData {
+    outline: none;
+    margin: 0 auto;
+    margin-bottom: 2pt;
+    margin-left: 25pt;
+    width: 350pt;
+    height: 20pt;
+    padding-left: 10pt;
+    background-color: transparent;
+    border: none;
+    color: var(--fontColor);
+}
+    .inputData::placeholder {
+        color: var(--fontPlaceholderColor);
+    }
+
+#logInSignUpBtnId {
+    cursor: pointer;
+    color: #999;
+    font-size: 9pt;
+    width: fit-content;
+    user-select: none;
+}
+    #logInSignUpBtnId:hover {
+        color: var(--fontColor);
+    }
+
+#submitBtnId {
+    background: transparent;
+    color: var(--fontColor);
+    border: 1px solid var(--fontColor);
+    height: 30pt;
+    width: 100%;
+    margin-top: 20pt;
+}
+    #submitBtnId:hover {
+        background: #0006;
+    }
